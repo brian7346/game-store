@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(25, 26, 28);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  max-width: 1180px;;
+  margin: 0 auto;
+  padding: 0 40px;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.secondary-text {
+  color: rgb(80, 82, 84);
 }
