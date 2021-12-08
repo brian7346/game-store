@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { GameGenre } from "../game-genre";
 import { GameBuy } from "../game-buy";
 import { GameCover } from "../game-cover/game-cover";
@@ -8,11 +8,11 @@ import { setCurrentGame } from "../../store/games/reducer";
 import "./game-item.css";
 
 export const GameItem = ({ game }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch(setCurrentGame(game));
-    history.push(`/app/${game.title}`);
+    navigate(`/app/${game.title}`);
   };
 
   return (
