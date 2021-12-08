@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Routes
 } from "react-router-dom";
 import { Header } from "./components/header";
 import { HomePage } from "./pages/home-page";
@@ -16,17 +16,11 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-            <Switch>
-              <Route exact path="/order">
-                <OrderPage />
-              </Route>
-              <Route exact path="/app/:title">
-                <GamePage />
-              </Route>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/order" element={<OrderPage /> }/>
+              <Route path="/app/:title" element={ <GamePage /> }/>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
         </div>
       </Router>
     </Provider>
